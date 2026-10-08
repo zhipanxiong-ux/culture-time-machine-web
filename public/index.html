@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081722"><meta name="description" content="Choose a moment in history. Explore different places. Discover how people lived and why their worlds were different.">
+<title>Culture Time Machine · Explore 750 CE</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#story">Skip to comparison</a>
+<div class="app-shell">
+  <header class="masthead">
+    <a class="brand" href="?year=750&places=changan,heijo&topic=work" aria-label="Culture Time Machine home"><span class="brand-mark" aria-hidden="true">✳</span><span>CULTURE<br>TIME MACHINE</span></a>
+    <div class="masthead-right"><span class="edition">AN OPEN HISTORICAL ATLAS <span class="edition-no">/ 001</span></span><button class="text-button" id="aboutButton" type="button">About & sources <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main>
+    <div class="intro-line"><span class="eyebrow">EXPLORE THE WORLD AT A MOMENT IN TIME</span><span class="coverage-pill"><span class="live-dot"></span> ONE REVIEWED JOURNEY</span></div>
+    <div class="main-grid">
+      <section class="explorer" aria-label="Explore the globe and time">
+        <div class="explorer-heading"><div><span class="eyebrow muted">01 / SET THE MOMENT</span><h1>Where will time<br><em>take you?</em></h1></div><div class="hero-meta"><span class="eyebrow muted">SELECTED MOMENT</span><strong id="heroYear">750 <small>CE</small></strong><p>Turn the Earth. Compare two places and the lives around them.</p></div></div>
+        <div class="globe-wrap">
+          <div class="orb-halo" aria-hidden="true"></div><canvas id="globe" width="680" height="680" aria-label="Rotatable globe showing Chang’an and Heijō-kyō. Use the place controls below as an alternative."></canvas>
+          <div class="globe-caption top"><span id="globeStatus">EARTH / LOADING COASTLINES</span></div><div class="globe-caption bottom">DRAG TO ROTATE <span>·</span> SELECT A MARKER</div>
+          <div class="globe-fallback" id="globeFallback" hidden>Globe drawing is unavailable. Use the place buttons below to explore this journey.</div>
+        </div>
+        <div class="place-strip" aria-label="Featured places"><button type="button" class="place-choice" data-place="changan"><span class="place-index">01</span><span><strong>Chang’an</strong><small>TANG CHINA</small></span><span aria-hidden="true">↗</span></button><span class="place-connector" aria-hidden="true">⇄</span><button type="button" class="place-choice" data-place="heijo"><span class="place-index">02</span><span><strong>Heijō-kyō</strong><small>NARA JAPAN</small></span><span aria-hidden="true">↗</span></button></div>
+        <section class="time-panel" aria-labelledby="timeHeading"><div class="time-top"><div><span class="eyebrow muted" id="timeHeading">02 / TURN THE TIME DRIVE</span><div class="year-display" id="yearDisplay">750 <small>CE</small></div></div><span class="time-status" id="timeStatus">REVIEWED JOURNEY</span></div><input id="yearSlider" type="range" min="-499" max="2025" value="750" aria-label="Select year"><div class="scale"><span>500 BCE</span><button type="button" id="resetYear">750 CE <span class="reviewed-dot">●</span></button><span>2025 CE</span></div><p class="time-note" id="timeNote">The dated comparison is centered on c. 750 CE. Other years are not yet reviewed for this public edition.</p></section>
+      </section>
+      <section class="story" id="story" aria-labelledby="storyTitle">
+        <div class="story-top"><span class="eyebrow copper">FEATURED JOURNEY <span class="slash">/</span> 750 CE</span><button id="shareButton" class="share-button" type="button">Copy this moment <span aria-hidden="true">↗</span></button></div>
+        <div id="journeyView"><h2 id="storyTitle">Two capitals.<br><em>One century.</em></h2><p class="lead">Around 750 CE, two planned capitals were linked by ideas, materials and people. Their streets can be compared; their residents cannot be reduced to one shared way of life.</p>
+          <div class="chapter-heading"><span class="eyebrow muted">COMPARE THE EVIDENCE</span><span class="chapter-number">01—04</span></div>
+          <div class="topic-tabs" id="topicTabs" role="tablist" aria-label="Comparison topic"></div>
+          <div class="story-card" id="topicPanel" role="tabpanel" tabindex="0"></div>
+          <div class="story-foot"><span class="foot-icon">◇</span><p>Present-day place names help locate the story. They are not timeless national labels. <button type="button" id="methodButton">How we read the evidence ↗</button></p></div>
+        </div>
+        <div id="unavailableView" class="unavailable" hidden><span class="eyebrow copper">NO REVIEWED COMPARISON</span><h2 id="unavailableTitle">This moment is still open.</h2><p>Our public edition currently has one complete, sourced comparison at 750 CE. The full desktop archive contains broader material under continuing review.</p><button type="button" id="returnTo750" class="primary-button">Return to 750 CE <span aria-hidden="true">→</span></button></div>
+      </section>
+    </div>
+  </main>
+  <footer><span>AN ATLAS IN PROGRESS</span><span>RESEARCHED CONTEXTS, CLEAR LIMITS</span><a id="contributeLink" href="./about.html#contribute">CONTRIBUTE A CORRECTION ↗</a></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="aboutDialog" aria-labelledby="aboutTitle"><button class="dialog-close" id="closeDialog" type="button" aria-label="Close">✕</button><span class="eyebrow copper">THE METHOD</span><h2 id="aboutTitle">A time machine<br><em>with footnotes.</em></h2><p>Culture Time Machine lets you compare places at a chosen moment. This public edition starts with one reviewed journey. Its claims are tied to museum, heritage and archaeological sources; gaps stay visible.</p><div id="sourceList"></div><p class="dialog-note">The map uses modern coastlines as a geographic locator. Markers locate capital regions; they do not draw historical borders.</p><a class="primary-button" href="./about.html">Read more & contribute <span aria-hidden="true">→</span></a></dialog>
+<script src="./state.js" defer></script><script src="./content.js" defer></script><script src="./app.js" defer></script>
+</body>
+</html>

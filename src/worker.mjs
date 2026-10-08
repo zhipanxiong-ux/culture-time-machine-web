@@ -1,0 +1,2 @@
+const json = (body, status = 200) => new Response(JSON.stringify(body), {status, headers: {'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
+export default {async fetch(request,env){const path=new URL(request.url).pathname;if(path==='/api/health'){if(request.method!=='GET')return json({error:'method_not_allowed'},405);return json({status:'ok',release:'public-preview-1'});}if(path==='/api'||path.startsWith('/api/'))return json({error:'not_found'},404);return env.ASSETS.fetch(request);}};

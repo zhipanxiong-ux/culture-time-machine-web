@@ -1,0 +1,38 @@
+name: Historical correction
+about: Propose a sourced correction to a claim or date
+labels: [history, needs-review]
+body:
+  - type: input
+    id: place
+    attributes:
+      label: Place or historical context
+      placeholder: Chang’an / Heijō-kyō
+    validations:
+      required: true
+  - type: input
+    id: period
+    attributes:
+      label: Period or selected year
+      placeholder: 750 CE
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current claim and page URL
+      description: Quote only the short phrase that needs correction.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction and uncertainty
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting evidence
+      description: Link the source and give a page, section or passage when possible.
+    validations:
+      required: true
