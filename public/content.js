@@ -9,13 +9,13 @@ window.CTM_CONTENT = {
     naraOffices: { title: 'Nara Palace Excavation Report VIII', institution: 'Nara National Research Institute for Cultural Properties', url: 'https://www.nabunken.go.jp/english/historical-material/8.html', scope: 'Rice tribute, palace brewing and clothing workshop records' }
   },
   journey: {
-    id: 'tang-nara-750', year: 750, label: 'Two capitals, one century',
+    id: 'tang-nara-750', year: 750, reviewStatus: 'reviewed', label: 'Two capitals, one century',
     title: 'Chang’an & Heijō-kyō',
     intro: 'Around 750 CE, two planned capitals were linked by ideas, materials and people. Their streets can be compared; their residents cannot be reduced to one shared way of life.',
     caution: 'This is a comparison of capital regions and the surviving evidence, not a portrait of every Tang or Nara household.',
     places: [
-      { id: 'changan', name: 'Chang’an', region: 'Tang China · Guanzhong', lat: 34.27, lon: 108.95, accent: '#f0b987', description: 'The Tang capital brought merchants, clerics, envoys and officials into a walled urban center. Its court world was connected to places far beyond the empire.', sources: ['metTang'] },
-      { id: 'heijo', name: 'Heijō-kyō', region: 'Nara Japan · Yamato', lat: 34.69, lon: 135.79, accent: '#a6d9c2', description: 'The capital established in 710 gathered court offices, temples, workshops and goods supplied by provincial communities. Excavation gives unusually direct traces of administration.', sources: ['unescoNara', 'naraTablets'] }
+      { id: 'changan', name: 'Chang’an', yearRange: [618, 907], region: 'Tang China · Guanzhong', lat: 34.27, lon: 108.95, accent: '#f0b987', description: 'The Tang capital brought merchants, clerics, envoys and officials into a walled urban center. Its court world was connected to places far beyond the empire.', sources: ['metTang'] },
+      { id: 'heijo', name: 'Heijō-kyō', yearRange: [710, 784], region: 'Nara Japan · Yamato', lat: 34.69, lon: 135.79, accent: '#a6d9c2', description: 'The capital established in 710 gathered court offices, temples, workshops and goods supplied by provincial communities. Excavation gives unusually direct traces of administration.', sources: ['unescoNara', 'naraTablets'] }
     ],
     topics: [
       { id: 'work', label: 'Work & obligations', kicker: 'Who kept a capital running?', left: 'Chang’an held court officials, merchants, clergy and visiting envoys. This describes an urban mix, not a typical Tang subject: farming and frontier labor lay beyond the capital.', right: 'Palace tablets record taxes in kind, official messages and workers. Some 745–747 records can be dated closely; they reveal administration more clearly than the full lives of those who produced the goods.', insight: 'Both capitals depended on people outside their walls. The Japanese tablets make certain deliveries and offices unusually visible; the Tang essay describes a broader urban world.', sources: ['metTang', 'naraTablets', 'naraOffices'] },

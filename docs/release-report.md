@@ -10,7 +10,7 @@ Frontend: plain HTML/CSS/JavaScript, 2D canvas globe, modern Natural Earth coast
 
 - `npm test`: four checks pass for BCE/CE display, URL restoration, malformed URL handling and Worker API behavior.
 - Local Wrangler preview: `/api/health` returned JSON 200; unknown `/api/missing` returned JSON 404; unknown website path returned 404; root shared query links returned the site and restored state.
-- Browser: desktop at 1440×900 and mobile at 390×844 manually inspected. Topic switching, URL update, back/forward, refresh, unsupported-year state and return control worked. The saved [desktop](desktop.png) and [mobile](mobile.png) screenshots show the reviewed view. The mobile comparison stacks places for readable text.
+- Browser: Chromium desktop at 1440×900 and mobile at 390×844 manually inspected. Safari/WebKit desktop rendering and topic switching also checked. Topic switching, URL update, back/forward, refresh, unsupported-year state and return control worked. The saved [desktop](desktop.png) and [mobile](mobile.png) screenshots show the reviewed view. The mobile comparison stacks places for readable text.
 - Output: nine public files, roughly 80 KB uncompressed. The land mask is about 20 KB. No external runtime script, font or image download is required.
 - Static package inventory and a focused credential-pattern scan found only the intended app, map, metadata and Worker code. `dist/` is not committed.
 
