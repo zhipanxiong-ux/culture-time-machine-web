@@ -19,6 +19,8 @@ npm run build
 npm run dev
 ```
 
+`.env.example` records the empty local configuration for this release. No secrets are needed.
+
 Wrangler serves the site at `http://127.0.0.1:8787/` and `/api/health`. You can also open `public/index.html` directly in a browser to read the content without a server; the health endpoint only exists through the Worker. `npm run build` copies only nine named public files into `dist/`.
 
 ## Architecture
